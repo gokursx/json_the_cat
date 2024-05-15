@@ -4,9 +4,8 @@
 const request = require('request');
 
 const fetchBreedDescription = (breedName, callback) => {
-  const url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
 
-  request(url, (error, resp, body) => {
+  fetchBreedDescription('Siberian', (error, description) =>  {
     if (error) {
       callback(`Failed to request details: ${error}`, null);
       return;
