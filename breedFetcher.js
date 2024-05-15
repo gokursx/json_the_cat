@@ -1,11 +1,8 @@
-
 'use strict';
 
 const request = require('request');
 
-const fetchBreedDescription = (breedName, callback) => {
-
-  fetchBreedDescription('Siberian', (error, description) =>  {
+fetchBreedDescription('Siberian', (error, description) => {
     if (error) {
       callback(`Failed to request details: ${error}`, null);
       return;
@@ -25,5 +22,3 @@ const fetchBreedDescription = (breedName, callback) => {
     }
   });
 };
-
-module.exports = { fetchBreedDescription };
